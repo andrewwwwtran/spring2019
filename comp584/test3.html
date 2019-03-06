@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery - Three</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  </head>
+  <body>
+
+    <form id="my-form" action="three.html" method="POST">
+    Box: <input type="text" id="box" name="my-box" />
+    <br />
+    <input type="submit" id="button" value="Get Val" />
+    </form>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $("form#my-form").submit(function() {
+        let val = $("#box").val();
+        console.log(val);
+        return false;
+      });
+    });
+    </script>
+
+  </body>
+</html>

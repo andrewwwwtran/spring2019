@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery - Two</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  </head>
+  <body>
+    <p id="one">One</p>
+    <p id="two" class="myclass">Two</p>
+    <p id="three" class="myclass">Three</p>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $("#one").click(function() {
+        console.log("Clicked one");
+      });
+      $(".myclass").click(function() {
+        console.log("Clicked " + $(this).html());
+        let val = $(this).html();
+        let val2 = val + val.split('').reverse().join('');
+        $(this).html(val2);
+      });
+    });
+    </script>
+  </body>
+</html>

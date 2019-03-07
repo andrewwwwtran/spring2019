@@ -24,11 +24,6 @@ io.on('connection', function(socket){
   });
 
   // client disconnecting from server
-  // socket.on('disconnect', (reason) => {
-  //   if(reason == 'io server disconnect'){
-  //     console.log("client disconnected");
-  //   }
-  // });
   socket.on('disconnect', function(){
     console.log('client disconnected.')
   });
